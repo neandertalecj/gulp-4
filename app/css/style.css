@@ -1,0 +1,12 @@
+.test {
+  background-color: #fff;
+}
+
+.test:hover {
+  background-color: #000;
+}
+
+.box {
+  text-align: left;
+  motion: 0;
+}
