@@ -1,6 +1,8 @@
 let gulp = require('gulp'),
     sass = require('gulp-sass'),
-    browserSync = require('browser-sync')
+    browserSync = require('browser-sync'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
 gulp.task('scss', function() {
     return gulp.src('app/scss/**/*.scss') //.(scss|sass)
@@ -15,6 +17,17 @@ gulp.task('html', function() {
     .pipe(browserSync.reload({stream: true}))
 })
 
+gulp.task('js', function() {
+    return gulp.src([
+        'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+    ])
+    .pipe(concat('libs.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.reload({stream: true})) 
+})
+
 // Static server
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -27,6 +40,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
     gulp.watch('app/*.html', gulp.parallel('html'));
+    gulp.watch('app/js/*.js', gulp.parallel('js'));
 })
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'))
