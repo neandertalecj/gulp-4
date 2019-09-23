@@ -23,7 +23,7 @@ npm packeges:
     slick-carousel
     magnific-popup
 
-Видалити slick.scss із node_modules бо не пойме що брати slick.css чи slick.scss
+Видалити slick.scss із node_modules бо не пойме що брати slick.css чи slick.scss  !!!It was FIXED
 
 plugins for js:
     gulp uglify for min
@@ -32,3 +32,8 @@ plugins for js:
 npm i gulp-uglify gulp-concat --save-dev
 
 npm i gulp-rename --save-dev When we compress the css file it'll rename this one adding suffics .min
+
+npm i del --save-dev  Its removes all files from dist before refresh
+
+gulp dist
+gulp clean
