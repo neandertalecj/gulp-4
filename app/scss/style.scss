@@ -1,17 +1,8 @@
-@import "../../node_modules/normalize.css/normalize";
-// @import "../../node_modules/slick-carousel/slick/slick";
-// @import "../../node_modules/magnific-popup/dist/magnific-popup";
+@import "vars";
+@import "libs";
+@import "fonts";
 
-body {
-    background-color: green;
-}
-.test {
-    background-color: #fff;
-    &:hover {
-        background-color: #000;
-    }
-}
-.box {
-    text-align: left;
-    motion: 0;
-}
+
+
+@import "media";
+
