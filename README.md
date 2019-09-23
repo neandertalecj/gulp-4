@@ -30,3 +30,5 @@ plugins for js:
     gulp cumcut - for concat
 
 npm i gulp-uglify gulp-concat --save-dev
+
+npm i gulp-rename --save-dev When we compress the css file it'll rename this one adding suffics .min
