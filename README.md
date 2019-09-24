@@ -35,5 +35,9 @@ npm i gulp-rename --save-dev When we compress the css file it'll rename this one
 
 npm i del --save-dev  Its removes all files from dist before refresh
 
+npm i gulp-autoprefixer --save-dev
+
 gulp dist
 gulp clean
+
+
